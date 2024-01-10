@@ -1,0 +1,24 @@
+name: Trigger External Workflow
+
+on:
+  workflow_run:
+    workflows: ["Bump"]
+    types:
+      - completed
+
+env:
+  HELM_EXPERIMENTAL_OCI: 1
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  trigger-external:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger External Workflow
+        uses: actions/repository-dispatch@v1
+        with:
+          token: ${{ secrets.PAT }}  # Personal Access Token (with repo scope) from the triggering repository
+          repository: michalby24/github-actions@v1
