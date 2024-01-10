@@ -17,7 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger External Workflow
-        uses: actions/repository-dispatch@v1
-        with:
-          token: ${{ secrets.PAT }}  # Personal Access Token (with repo scope) from the triggering repository
-          repository: michalby24/github-actions@v1
+        uses: michalby24/github-actions@v1
