@@ -1,10 +1,9 @@
 name: Trigger External Workflow
 
 on:
-  workflow_run:
-    workflows: ["Bump"]
-    types:
-      - completed
+  push:
+    branches:
+      - main
 
 env:
   HELM_EXPERIMENTAL_OCI: 1
