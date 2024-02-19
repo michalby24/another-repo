@@ -17,4 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger External Workflow
-        uses: michalby24/github-actions
+        uses: michalby24/github-actions@master
+        with:
+          event-type: 'michsi'
