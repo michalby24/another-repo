@@ -14,5 +14,5 @@ permissions:
 
 jobs:
   reusable_workflow_job:
-    uses: michalby24/demo-shared-workflow/.github/workflows/build_and_push.yaml@master
+    uses: michalby24/demo-shared-workflow/.github/workflows/build_and_push.yaml@main
     secrets: inherit
