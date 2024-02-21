@@ -1,4 +1,4 @@
-name: Trigger External Workflows
+name: Trigger External Workflow
 
 on:
   push:
