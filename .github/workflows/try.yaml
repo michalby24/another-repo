@@ -16,33 +16,3 @@ jobs:
   reusable_workflow_job:
     uses: michalby24/github-actions/.github/workflows/build_and_push.yaml@master
     secrets: inherit
-    # runs-on: ubuntu-latest
-    # environment: production
-    # steps:
-    # - uses: michalby24/github-actions/.github/workflows/match-version.yaml@master
-      # with:
-      #   repo-token: ${{ secrets.envPAT }}
-      #   configuration-path: ${{ inputs.config-path }}
-  # call-workflow-passing-data:
-  #   uses: octo-org/example-repo/.github/workflows/reusable-workflow.yml@main
-  #   with:
-  #     config-path: .github/labeler.yml
-  #   secrets:
-  #     envPAT: ${{ secrets.envPAT }}
-  # trigger-external:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Trigger workflow in another repository
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       run: |
-  #         curl -X POST \
-  #           -H "Authorization: token $GITHUB_TOKEN" \
-  #           -H "Accept: application/vnd.github.everest-preview+json" \
-  #           https://api.github.com/repos/michalby24/github-actions/dispatches \
-  #           -d '{"event_type": "trigger-workflow"}'
-
-  #     - name: Trigger External Workflow
-  #       uses: michalby24/github-actions@master
-  #       with:
-  #         event-type: 'michsi'
