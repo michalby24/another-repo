@@ -14,5 +14,5 @@ permissions:
 
 jobs:
   reusable_workflow_job:
-    uses: MapColonies/shared-workflows/.github/workflows/build-and-push.yaml@master
+    uses: MapColonies/shared-workflows/.github/workflows/release-on-tag.yaml@master
     secrets: inherit
